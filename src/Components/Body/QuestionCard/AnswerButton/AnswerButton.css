@@ -1,0 +1,36 @@
+.AnswerButton__Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  width: 280px;
+  border: 1px solid var(--light-color);
+}
+
+.AnswerButton__AnswerLetter {
+  background-color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--highlight2);
+  font-weight: 700;
+  font-size: 1.5rem;
+  height: 100%;
+  width: 50px;
+  position: relative;
+  left: -43px;
+  border-radius: 10px 0 0px 10px;
+}
+
+.AnswerButton__AnswerText {
+  color: var(--dark-color);
+}
+
+.AnswerButton__RightAnswer {
+  background-color: var(--green);
+}
+
+.AnswerButton__WrongAnswer {
+  background-color: var(--red);
+}

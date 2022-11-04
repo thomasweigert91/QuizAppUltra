@@ -1,0 +1,4 @@
+.Button {
+  color: var(--highlight2);
+  transform: scale(3);
+}

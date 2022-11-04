@@ -1,0 +1,7 @@
+.Heading {
+    font-size: 3rem;
+    color: var(--highlight2);
+    text-shadow:
+    0 0 21px var(--highlight2),
+    0 0 42px var(--highlight1); 
+}

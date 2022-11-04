@@ -1,0 +1,7 @@
+.Footer {
+    height: 10%;
+    width: 100%;
+    background-color: var(--dark-color);
+    border-top: 2px solid var(--highlight1);
+    z-index: 5;
+}
