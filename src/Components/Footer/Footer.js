@@ -1,10 +1,10 @@
 import "./Footer.css";
 import { Navigation } from "./Navigation/Navigation";
 
-const Footer = () => {
+const Footer = ({ pageState, setPageState }) => {
   return (
     <section className="Footer">
-      <Navigation />
+      <Navigation pageState={pageState} setPageState={setPageState} />
     </section>
   );
 };

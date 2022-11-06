@@ -3,8 +3,14 @@ import { faAdd } from "@fortawesome/free-solid-svg-icons";
 
 import "./AddButton.css";
 
-const AddButton = () => {
-  return <FontAwesomeIcon icon={faAdd} className="Button" />;
+const AddButton = ({ setPageState }) => {
+  return (
+    <FontAwesomeIcon
+      icon={faAdd}
+      className="Button"
+      onClick={() => setPageState("Add")}
+    />
+  );
 };
 
 export { AddButton };

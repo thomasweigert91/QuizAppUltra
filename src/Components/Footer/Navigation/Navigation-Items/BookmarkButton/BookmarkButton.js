@@ -3,8 +3,14 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 import "./BookmarkButton.css";
 
-const BookmarkButton = () => {
-  return <FontAwesomeIcon icon={faBookmark} className="Button" />;
+const BookmarkButton = ({ setPageState }) => {
+  return (
+    <FontAwesomeIcon
+      icon={faBookmark}
+      className="Button"
+      onClick={() => setPageState("Bookmark")}
+    />
+  );
 };
 
 export { BookmarkButton };

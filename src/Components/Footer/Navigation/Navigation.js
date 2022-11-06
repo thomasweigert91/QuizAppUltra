@@ -4,13 +4,13 @@ import { ProfileButton } from "./Navigation-Items/ProfileButton/ProfileButton";
 import { HomeButton } from "./Navigation-Items/HomeButton/HomeButton";
 import { BookmarkButton } from "./Navigation-Items/BookmarkButton/BookmarkButton";
 
-const Navigation = () => {
+const Navigation = ({ pageState, setPageState }) => {
   return (
     <div className="Navigation">
-      <HomeButton />
-      <AddButton />
-      <BookmarkButton />
-      <ProfileButton />
+      <HomeButton pageState={pageState} setPageState={setPageState} />
+      <AddButton pageState={pageState} setPageState={setPageState} />
+      <BookmarkButton pageState={pageState} setPageState={setPageState} />
+      <ProfileButton pageState={pageState} setPageState={setPageState} />
     </div>
   );
 };

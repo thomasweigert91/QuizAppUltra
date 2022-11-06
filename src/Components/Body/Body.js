@@ -1,12 +1,42 @@
 import "./Body.css";
+import { Bookmark } from "./Bookmark/Bookmark";
 import { Home } from "./Home/Home";
+import { StartPage } from "./Startpage/Startpage";
+import { Add } from "./Add/Add";
+import { ProfilePage } from "./Profile/Profile";
 
-const Body = () => {
-  return (
-    <section className="body__container">
-      <Home />
-    </section>
-  );
-};
+function Body({ pageState }) {
+  if (pageState === "Startpage") {
+    return (
+      <section className="body__container">
+        <StartPage />
+      </section>
+    );
+  } else if (pageState === "Home") {
+    return (
+      <section className="body__container">
+        <Home />
+      </section>
+    );
+  } else if (pageState === "Bookmark") {
+    return (
+      <section className="body__container">
+        <Bookmark />
+      </section>
+    );
+  } else if (pageState === "Add") {
+    return (
+      <section className="body__container">
+        <Add />
+      </section>
+    );
+  } else if (pageState === "Profile") {
+    return (
+      <section className="body__container">
+        <ProfilePage />
+      </section>
+    );
+  }
+}
 
 export { Body };

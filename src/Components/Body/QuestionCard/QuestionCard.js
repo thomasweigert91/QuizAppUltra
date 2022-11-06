@@ -9,10 +9,10 @@ const QuestionCard = () => {
         Wie heißt die Hauptstadt von Spanien?
       </h3>
       <div className="QuestionCard__AnswerButton__Container">
-        <AnswerButton>className="AnswerButton__RightAnswer"</AnswerButton>
+        <AnswerButton answer={false} />
         <AnswerButton />
         <AnswerButton />
-        <AnswerButton />
+        <AnswerButton answer={true} />
       </div>
     </section>
   );
