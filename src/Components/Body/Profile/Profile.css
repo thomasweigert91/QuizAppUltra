@@ -1,0 +1,18 @@
+.ProfilePage__Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.ProfilePage__User {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ProfilePage__Picture {
+  transform: scale(0.5);
+}

@@ -1,15 +1,40 @@
+import { questions } from "../../../../database/questions";
 import "./AnswerButton.css";
+import { useState } from "react";
 
-const AnswerButton = ({ answer }) => {
+const AnswerButton = ({
+  answer,
+  answerOption,
+  answerText,
+  currentQuestion,
+  setCurrentQuestion,
+}) => {
+  const handleAnswerButtonClick = (isCorrect) => {
+    if (isCorrect === true) {
+      alert("Good job!");
+    } else {
+      alert("That was not right!:(");
+    }
+
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      alert("You have reached the end of the Quiz");
+    }
+  };
+
   return (
     <>
       <div
-        className={`AnswerButton__Container ${
-          answer ? "AnswerButton__RightAnswer" : "AnswerButton__WrongAnswer"
+        className={`AnswerButton ${
+          questions.showAnswer
+            ? "AnswerButton__RightAnswer"
+            : "AnswerButton_WrongAnswer"
         }`}
+        onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
       >
-        <div className="AnswerButton__AnswerLetter">A</div>
-        <p className="AnswerButton__AnswerText">LoremIpsumAnswer</p>
+        <p className="AnswerButton__AnswerText">{answerOption.answerText}</p>
       </div>
     </>
   );

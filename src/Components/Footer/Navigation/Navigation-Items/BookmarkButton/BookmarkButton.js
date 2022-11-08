@@ -1,13 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
-import "./BookmarkButton.css";
-
-const BookmarkButton = ({ setPageState }) => {
+const BookmarkButton = ({ setPageState, pageState }) => {
   return (
     <FontAwesomeIcon
       icon={faBookmark}
-      className="Button"
+      className={pageState === "Bookmark" ? "Button Button--Active" : "Button"}
       onClick={() => setPageState("Bookmark")}
     />
   );

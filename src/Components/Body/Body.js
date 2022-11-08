@@ -5,11 +5,11 @@ import { StartPage } from "./Startpage/Startpage";
 import { Add } from "./Add/Add";
 import { ProfilePage } from "./Profile/Profile";
 
-function Body({ pageState }) {
+function Body({ pageState, setPageState }) {
   if (pageState === "Startpage") {
     return (
       <section className="body__container">
-        <StartPage />
+        <StartPage setPageState={setPageState} />
       </section>
     );
   } else if (pageState === "Home") {

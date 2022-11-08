@@ -1,10 +1,12 @@
 import "./Startpage.css";
 
-const StartPage = () => {
+const StartPage = (setPageState) => {
   return (
     <>
       <section className="StartPage__Container">
-        <div className="StartPage__Button">Start</div>
+        <div className="StartPage__Button" onClick={() => setPageState("Home")}>
+          Start
+        </div>
       </section>
     </>
   );

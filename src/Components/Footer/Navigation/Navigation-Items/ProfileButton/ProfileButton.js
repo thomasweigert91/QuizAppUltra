@@ -7,9 +7,7 @@ function ProfileButton({ pageState, setPageState }) {
     <FontAwesomeIcon
       icon={faPortrait}
       onClick={() => setPageState("Profile")}
-      className={`icon ${
-        pageState === "Profile" ? "Button Button--Active" : "Button"
-      }`}
+      className={pageState === "Profile" ? "Button Button--Active" : "Button"}
     />
   );
 }

@@ -12,5 +12,5 @@
 }
 
 .Button--Active {
-  transform: scale(1.5);
+  color: var(--highlight1);
 }

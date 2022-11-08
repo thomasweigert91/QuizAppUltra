@@ -1,13 +1,13 @@
 .QuestionCard__Container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   background-color: var(--medium-color);
   border-radius: 10px;
   border: 1px solid var(--light-color);
   width: 325px;
-  height: 400px;
+  height: 500px;
 }
 
 .QuestionCard__Question {
@@ -24,8 +24,8 @@
 
 .QuestionCard__AnswerButton__Container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 7px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }

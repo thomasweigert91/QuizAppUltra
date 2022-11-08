@@ -1,13 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAdd } from "@fortawesome/free-solid-svg-icons";
 
-import "./AddButton.css";
-
-const AddButton = ({ setPageState }) => {
+const AddButton = ({ setPageState, pageState }) => {
   return (
     <FontAwesomeIcon
       icon={faAdd}
-      className="Button"
+      className={pageState === "Add" ? "Button Button--Active" : "Button"}
       onClick={() => setPageState("Add")}
     />
   );
